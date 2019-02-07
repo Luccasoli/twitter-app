@@ -9,6 +9,7 @@ mongoose.connect('mongodb://luccasoli:admin123@ds225375.mlab.com:25375/omni_luca
     useNewUrlParser: true
 })
 
+app.use(express.json())
 app.use(require('./routes'))
 
 app.listen(3000, () => {
