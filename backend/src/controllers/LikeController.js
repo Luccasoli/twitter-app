@@ -10,6 +10,8 @@ class LikeController {
 
         await tweet.save()
 
+        req.io.emit('like', tweet)
+
         return res.json(tweet)
     }
 }
